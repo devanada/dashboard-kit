@@ -1,0 +1,268 @@
+import { ITicket } from "@/utils/types/tickets";
+
+export const sampleTickets: ITicket[] = [
+  {
+    id: 1,
+    title: "Contact Email not Linked",
+    priority: "HIGH",
+    customer: {
+      name: "Tom Cruise",
+      profile_picture: "https://github.com/devanada.png",
+    },
+    created_at: "2019-05-26T06:30:00.000Z",
+    updated_at: "2019-05-26T06:30:00.000Z",
+  },
+  {
+    id: 2,
+    title: "Adding Images to Featured Posts",
+    priority: "LOW",
+    customer: {
+      name: "Matt Damon",
+      profile_picture: "https://github.com/devanada.png",
+    },
+    created_at: "2019-05-26T08:00:00.000Z",
+    updated_at: "2019-05-26T08:00:00.000Z",
+  },
+  {
+    id: 3,
+    title: "When will I be charged this month?",
+    priority: "HIGH",
+    customer: {
+      name: "Robert Downey",
+      profile_picture: "https://github.com/devanada.png",
+    },
+    created_at: "2019-05-26T07:30:00.000Z",
+    updated_at: "2019-05-26T07:30:00.000Z",
+  },
+  {
+    id: 4,
+    title: "Payment not going through",
+    priority: "NORMAL",
+    customer: {
+      name: "Christian Bale",
+      profile_picture: "https://github.com/devanada.png",
+    },
+    created_at: "2019-05-25T17:00:00.000Z",
+    updated_at: "2019-05-25T17:00:00.000Z",
+  },
+  {
+    id: 5,
+    title: "Unable to add replies",
+    priority: "HIGH",
+    customer: {
+      name: "Henry Cavill",
+      profile_picture: "https://github.com/devanada.png",
+    },
+    created_at: "2019-05-25T16:00:00.000Z",
+    updated_at: "2019-05-25T16:00:00.000Z",
+  },
+  {
+    id: 6,
+    title: "Downtime since last week",
+    priority: "NORMAL",
+    customer: {
+      name: "Chris Evans",
+      profile_picture: "https://github.com/devanada.png",
+    },
+    created_at: "2019-05-25T14:00:00.000Z",
+    updated_at: "2019-05-25T14:00:00.000Z",
+  },
+  {
+    id: 7,
+    title: "Referral Bonus",
+    priority: "LOW",
+    customer: {
+      name: "Sam Smith",
+      profile_picture: "https://github.com/devanada.png",
+    },
+    created_at: "2019-05-25T11:30:00.000Z",
+    updated_at: "2019-05-25T11:30:00.000Z",
+  },
+  {
+    id: 8,
+    title: "How do I change my password",
+    priority: "NORMAL",
+    customer: {
+      name: "Steve Rogers",
+      profile_picture: "https://github.com/devanada.png",
+    },
+    created_at: "2019-05-24T13:00:00.000Z",
+    updated_at: "2019-05-24T13:00:00.000Z",
+  },
+  {
+    id: 9,
+    title: "Contact Email not Linked",
+    priority: "HIGH",
+    customer: {
+      name: "Tom Cruise",
+      profile_picture: "https://github.com/devanada.png",
+    },
+    created_at: "2019-05-23T06:30:00.000Z",
+    updated_at: "2019-05-23T06:30:00.000Z",
+  },
+  {
+    id: 10,
+    title: "Adding Images to Featured Posts",
+    priority: "LOW",
+    customer: {
+      name: "Matt Damon",
+      profile_picture: "https://github.com/devanada.png",
+    },
+    created_at: "2019-05-23T08:00:00.000Z",
+    updated_at: "2019-05-23T08:00:00.000Z",
+  },
+  {
+    id: 11,
+    title: "When will I be charged this month?",
+    priority: "HIGH",
+    customer: {
+      name: "Robert Downey",
+      profile_picture: "https://github.com/devanada.png",
+    },
+    created_at: "2019-05-23T07:30:00.000Z",
+    updated_at: "2019-05-23T07:30:00.000Z",
+  },
+  {
+    id: 12,
+    title: "Payment not going through",
+    priority: "NORMAL",
+    customer: {
+      name: "Christian Bale",
+      profile_picture: "https://github.com/devanada.png",
+    },
+    created_at: "2019-05-22T17:00:00.000Z",
+    updated_at: "2019-05-22T17:00:00.000Z",
+  },
+  {
+    id: 13,
+    title: "Unable to add replies",
+    priority: "HIGH",
+    customer: {
+      name: "Henry Cavill",
+      profile_picture: "https://github.com/devanada.png",
+    },
+    created_at: "2019-05-22T16:00:00.000Z",
+    updated_at: "2019-05-22T16:00:00.000Z",
+  },
+  {
+    id: 14,
+    title: "Downtime since last week",
+    priority: "NORMAL",
+    customer: {
+      name: "Chris Evans",
+      profile_picture: "https://github.com/devanada.png",
+    },
+    created_at: "2019-05-22T14:00:00.000Z",
+    updated_at: "2019-05-22T14:00:00.000Z",
+  },
+  {
+    id: 15,
+    title: "Referral Bonus",
+    priority: "LOW",
+    customer: {
+      name: "Sam Smith",
+      profile_picture: "https://github.com/devanada.png",
+    },
+    created_at: "2019-05-22T11:30:00.000Z",
+    updated_at: "2019-05-22T11:30:00.000Z",
+  },
+  {
+    id: 16,
+    title: "How do I change my password",
+    priority: "NORMAL",
+    customer: {
+      name: "Steve Rogers",
+      profile_picture: "https://github.com/devanada.png",
+    },
+    created_at: "2019-05-21T13:00:00.000Z",
+    updated_at: "2019-05-21T13:00:00.000Z",
+  },
+  {
+    id: 17,
+    title: "Contact Email not Linked",
+    priority: "HIGH",
+    customer: {
+      name: "Tom Cruise",
+      profile_picture: "https://github.com/devanada.png",
+    },
+    created_at: "2019-05-23T06:30:00.000Z",
+    updated_at: "2019-05-23T06:30:00.000Z",
+  },
+  {
+    id: 18,
+    title: "Adding Images to Featured Posts",
+    priority: "LOW",
+    customer: {
+      name: "Matt Damon",
+      profile_picture: "https://github.com/devanada.png",
+    },
+    created_at: "2019-05-23T08:00:00.000Z",
+    updated_at: "2019-05-23T08:00:00.000Z",
+  },
+  {
+    id: 19,
+    title: "When will I be charged this month?",
+    priority: "HIGH",
+    customer: {
+      name: "Robert Downey",
+      profile_picture: "https://github.com/devanada.png",
+    },
+    created_at: "2019-05-23T07:30:00.000Z",
+    updated_at: "2019-05-23T07:30:00.000Z",
+  },
+  {
+    id: 20,
+    title: "Payment not going through",
+    priority: "NORMAL",
+    customer: {
+      name: "Christian Bale",
+      profile_picture: "https://github.com/devanada.png",
+    },
+    created_at: "2019-05-22T17:00:00.000Z",
+    updated_at: "2019-05-22T17:00:00.000Z",
+  },
+  {
+    id: 21,
+    title: "Unable to add replies",
+    priority: "HIGH",
+    customer: {
+      name: "Henry Cavill",
+      profile_picture: "https://github.com/devanada.png",
+    },
+    created_at: "2019-05-22T16:00:00.000Z",
+    updated_at: "2019-05-22T16:00:00.000Z",
+  },
+  {
+    id: 22,
+    title: "Downtime since last week",
+    priority: "NORMAL",
+    customer: {
+      name: "Chris Evans",
+      profile_picture: "https://github.com/devanada.png",
+    },
+    created_at: "2019-05-22T14:00:00.000Z",
+    updated_at: "2019-05-22T14:00:00.000Z",
+  },
+  {
+    id: 23,
+    title: "Referral Bonus",
+    priority: "LOW",
+    customer: {
+      name: "Sam Smith",
+      profile_picture: "https://github.com/devanada.png",
+    },
+    created_at: "2019-05-22T11:30:00.000Z",
+    updated_at: "2019-05-22T11:30:00.000Z",
+  },
+  {
+    id: 24,
+    title: "How do I change my password",
+    priority: "NORMAL",
+    customer: {
+      name: "Steve Rogers",
+      profile_picture: "https://github.com/devanada.png",
+    },
+    created_at: "2019-05-21T13:00:00.000Z",
+    updated_at: "2019-05-21T13:00:00.000Z",
+  },
+];
