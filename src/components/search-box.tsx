@@ -15,6 +15,7 @@ import {
   CommandGroup,
   CommandInput,
   CommandItem,
+  CommandList,
 } from "@/components/ui/command";
 
 import { ITask } from "@/utils/types/overview";
@@ -32,8 +33,9 @@ const SearchBox = (props: Props) => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("");
 
-  const getSuggestions = useCallback(async function (query: string) {
+  const getSuggestions = useCallback(async (query: string) => {
     if (!query) {
+      setTasks([]);
       return;
     }
 
@@ -42,45 +44,47 @@ const SearchBox = (props: Props) => {
   }, []);
 
   const getSuggestionsDebounce = useMemo(
-    () => debounce(getSuggestions, 1000),
+    () => debounce(getSuggestions, 300),
     [getSuggestions]
   );
 
-  function onInputChange(newValue: string) {
+  const onInputChange = useCallback(async (newValue: string) => {
     getSuggestionsDebounce(newValue);
-  }
+  }, []);
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>{children}</PopoverTrigger>
-      <PopoverContent className="w-[150px] md:w-[200px] lg:w-[300px] p-0">
+      <PopoverContent className="p-0">
         <Command>
           <CommandInput
             placeholder={t("Search Placeholder")}
             onValueChange={onInputChange}
           />
           <CommandEmpty>{t("Search Not Found")}</CommandEmpty>
-          <CommandGroup>
-            {tasks.map((task) => (
-              <CommandItem
-                key={task.name}
-                value={task.name}
-                onSelect={(currentValue) => {
-                  setValue(currentValue === value ? "" : currentValue);
-                  setTasks([]);
-                  setOpen(false);
-                }}
-              >
-                <Check
-                  className={cn(
-                    "mr-2 h-4 w-4",
-                    value === task.name ? "opacity-100" : "opacity-0"
-                  )}
-                />
-                {task.name}
-              </CommandItem>
-            ))}
-          </CommandGroup>
+          <CommandList>
+            <CommandGroup>
+              {tasks.map((task) => (
+                <CommandItem
+                  key={task.name}
+                  value={task.name}
+                  onSelect={(currentValue) => {
+                    setValue(currentValue === value ? "" : currentValue);
+                    setTasks([]);
+                    setOpen(false);
+                  }}
+                >
+                  <Check
+                    className={cn(
+                      "mr-2 h-4 w-4",
+                      value === task.name ? "opacity-100" : "opacity-0"
+                    )}
+                  />
+                  {task.name}
+                </CommandItem>
+              ))}
+            </CommandGroup>
+          </CommandList>
         </Command>
       </PopoverContent>
     </Popover>

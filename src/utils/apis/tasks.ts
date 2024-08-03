@@ -6,7 +6,7 @@ export const getTasks = (query: string) => {
   return new Promise<IResponse<ITask[]>>((resolve) => {
     setTimeout(() => {
       const filterData = sampleTasks.filter((task) =>
-        task.name.includes(query)
+        task.name.toLocaleLowerCase().includes(query)
       );
 
       resolve({
